@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "SelectIndumentaria";
+}
+@if (ViewBag.verificacion == false){
+    <h2>El equipo ya se habia ingresado previamente</h2>
+}
+<form action='@Url.Action("GuardarIndumentaria")'>
+<table>
+    <tr>
+        <td>Equipos</td>
+        @foreach (var item in Equipos.ListaEquipos)
+        {
+           <td>@item</td>
+        }
+        <td> <input type="number" max="5" min="1" step="1" name="Equipo" required></td>
+   
+    </tr>
+       <tr>
+         <td>Remeras</td>
+        @foreach (var item in Equipos.ListaRemeras)
+        {
+           <td><img src="/@item" ></td>
+        }
+    <td> <input type="number" max="5" min="1" step="1" name="Remera" required></td>
+    </tr>
+        <tr>
+            <td>Pantalones</td>
+        @foreach (var item in Equipos.ListaPantalones)
+        {
+           <td><img src="/@item" ></td>
+        }
+    <td> <input type="number" max="5" min="1" step="1" name="Pantalon" required></td>
+    </tr>
+        <tr>
+            <td>Medias</td>
+        @foreach (var item in Equipos.ListaMedias)
+        {
+           <td><img src="/@item" ></td>
+        }
+   <td> <input type="number" max="5" min="1" step="1" name="Medias" required></td>
+    </tr>
+</table>
+<p><input type="submit" value="Enviar conjunto"></p>
+</form>

@@ -1,0 +1,38 @@
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 20px 60px 0px 20px;
+}
+
+footer {
+  position: fixed; 
+  bottom: 0; 
+  margin: 10px 0px 20px 0px;
+}
+h2{
+  cursor: crosshair;
+  text-shadow: #FC0 1px 0 10px;
+}
+img {
+  
+  transition: transform .2s;
+  height: 200px;
+  width: 200px;
+  border: 3px solid black;
+  padding: 10px;
+  margin: 0px;
+  cursor: zoom-in;
+}
+
+
+
